@@ -6,7 +6,7 @@ System zarządzania flotą: kartoteka pojazdu, zdarzenia i koszty, podatek od ś
 
 **Zaczynasz pracę: [docs/17-start-prac-wykonawca.md](docs/17-start-prac-wykonawca.md).** Cała dokumentacja: [docs/00-index.md](docs/00-index.md).
 
-**Dokumentacja: [docs/00-index.md](docs/00-index.md)** — zacznij od niej. Ten plik opisuje tylko, jak uruchomić kod.
+Ten plik opisuje tylko, jak uruchomić kod.
 
 ## Stan
 
