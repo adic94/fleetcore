@@ -4,6 +4,8 @@ System zarządzania flotą: kartoteka pojazdu, zdarzenia i koszty, podatek od ś
 
 > **Nazwa robocza.** „FleetCore" do podmiany przed pierwszą publikacją (domena, App Store, Google Play, bundle ID w `apps/mobile/app.json`).
 
+**Zaczynasz pracę: [docs/17-start-prac-wykonawca.md](docs/17-start-prac-wykonawca.md).** Cała dokumentacja: [docs/00-index.md](docs/00-index.md).
+
 **Dokumentacja: [docs/00-index.md](docs/00-index.md)** — zacznij od niej. Ten plik opisuje tylko, jak uruchomić kod.
 
 ## Stan

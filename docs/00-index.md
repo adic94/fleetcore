@@ -4,6 +4,8 @@ Dokumentacja koncepcyjna, produktowa i techniczna systemu zarządzania flotą.
 
 ## Szybka ścieżka czytania
 
+**Zaczynasz pracę jako wykonawca?** Najpierw [Start prac](17-start-prac-wykonawca.md) — dostępy, uruchomienie, zakres fazy 0.
+
 ### Zaczynasz od zera — przeczytaj w tej kolejności
 
 1. [Założenia projektu](01-project-brief.md) — po co to powstaje i co znaczy sukces
@@ -57,6 +59,7 @@ Dokumentacja koncepcyjna, produktowa i techniczna systemu zarządzania flotą.
 | `13-resources-and-prerequisites.md` | Ludzie, dane, dostępy, formalności, warunki startu |
 | `14-onboarding-klienta.md` | Demo przed umową, audyt danych po umowie, wdrożenie klienta, ścieżki migracji, odejście klienta |
 | `15-materialy-taxorder-pro.md` | Co przekazujemy z TaxOrder Pro: repozytorium, dane, co czytać, czego nie kopiować, lista kontrolna przekazania |
+| `17-start-prac-wykonawca.md` | Przekazanie dla wykonawcy: decyzje, dostępy, pierwszy dzień, zakres fazy 0, zasady pracy |
 | `16-platforma-integracji.md` | Import i eksport plików, API publiczne dla CRM/CFM/ERP i integratorów, webhooki, konektory, ZSI przez eksport |
 
 ## Jak czytać ostrzeżenia w tej dokumentacji
