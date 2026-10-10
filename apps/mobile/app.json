@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "FleetCore",
+    "slug": "fleetcore",
+    "version": "0.0.0",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "bundleIdentifier": "pl.fleetcore.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Zdjęcia do protokołów wydania i zdania pojazdu oraz zgłoszeń szkód."
+      }
+    },
+    "android": {
+      "package": "pl.fleetcore.app",
+      "permissions": ["CAMERA"]
+    }
+  }
+}

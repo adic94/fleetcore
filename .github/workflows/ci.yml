@@ -1,0 +1,44 @@
+# Bramki CI (docs/09, „Bramki testowe"). Te same bramki uruchamia się lokalnie przed wysłaniem —
+# minuty CI bywają wyczerpane w połowie miesiąca, wtedy bramki lokalne są całą siecią bezpieczeństwa.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: ci
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-retries 20
+    env:
+      DATABASE_URL: postgres://postgres:ci@localhost:5432/postgres
+      APP_DATABASE_URL: postgres://fleetcore_app:ci_app@localhost:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: migration-apply — migracje na czystej bazie
+        run: npm run db:migrate
+      - name: migration-apply — drugie uruchomienie nic nie zmienia
+        run: npm run db:migrate
+      - name: hasło roli aplikacji (tylko CI)
+        run: psql "$DATABASE_URL" -c "ALTER ROLE fleetcore_app PASSWORD 'ci_app'"
+
+      - name: tenant-isolation
+        run: npm run test:isolation
+      - name: tax-engine
+        run: npm run test:unit
+      - name: build
+        run: npm run build

@@ -1,0 +1,29 @@
+{
+  "name": "fleetcore",
+  "private": true,
+  "version": "0.0.0",
+  "description": "FleetCore — system zarządzania flotą. Dokumentacja: docs/00-index.md",
+  "workspaces": [
+    "apps/api",
+    "apps/web",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev:db": "docker compose up -d postgres redis minio",
+    "db:migrate": "node tools/migrate.mjs",
+    "db:status": "node tools/migrate.mjs --status",
+    "db:seed": "node tools/seed.mjs",
+    "test:isolation": "node --test tests/isolation/*.test.mjs",
+    "test:unit": "npm run test --workspace=packages/tax-engine",
+    "test:gates": "npm run test:unit && npm run test:isolation",
+    "build": "npm run build --workspaces --if-present",
+    "dev:api": "npm run start:dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web"
+  },
+  "devDependencies": {
+    "pg": "8.13.1"
+  }
+}

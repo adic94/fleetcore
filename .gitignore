@@ -1,0 +1,25 @@
+node_modules/
+dist/
+build/
+.expo/
+.vite/
+coverage/
+*.log
+
+# Poświadczenia — nigdy w repozytorium (docs/06, „Sekrety")
+.env
+.env.*
+!.env.example
+
+# Dane produkcyjne i osobowe — nigdy w drzewie repozytorium (docs/06, „Dane produkcyjne poza repozytorium").
+# Reguła chroni tylko pliki WEWNĄTRZ drzewa; narzędzia zapisujące VIN-y i nazwiska odmawiają zapisu tutaj.
+*.xlsx
+*.xls
+*.csv
+!db/seeds/**/*.csv
+*.pdf
+backups/
+exports/
+
+__pycache__/
+.venv/
