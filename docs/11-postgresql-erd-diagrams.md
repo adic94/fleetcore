@@ -443,3 +443,17 @@ flowchart LR
 Trzy tabele rosnące bez ograniczeń są partycjonowane miesięcznie po dacie zdarzenia. Partycje tworzy zadanie cykliczne z wyprzedzeniem, a nie mechanizm reagujący na pierwszy nieudany zapis.
 
 Retencja przez odłączanie partycji: pozycje GPS starsze niż 12 miesięcy są odłączane i archiwizowane po zbudowaniu agregatów dobowych. Odłączenie partycji jest natychmiastowe; kasowanie wierszy przy tej skali nie jest.
+
+
+## DANE WSADOWE !! DO ZROBIENIA
+
+## DANE KIEROWCÓW
+
+
+
+
+
+
+
+
+
